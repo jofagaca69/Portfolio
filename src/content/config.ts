@@ -5,11 +5,15 @@ export const collections = {
         type: 'content',
         schema: z.object({
             title: z.string(),
-            description: z.string(),
-            publishDate: z.coerce.date(),
-            tags: z.array(z.string()),
             img: z.string(),
             img_alt: z.string().optional(),
+            publishDate: z.coerce.date(),
+            startDate: z.any(),
+            endDate: z.any(),
+            job: z.string().optional(),
+            description: z.string(),
+            tags: z.array(z.string()),
+            tools: z.array(z.string()),
         }),
     }),
 };
